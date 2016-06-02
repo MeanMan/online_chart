@@ -64,10 +64,15 @@ function putHarbourMarker(id, lon, lat, names, link, type) {
         var popupText = "<b>" + name[0] +"</b>&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
         if (typeof name[1] != "undefined") {
             popupText += name[1];
+            
         }
+
         if (typeof name[2] != "undefined") {
             popupText += "<br/><i>" + name[2] + "</i>";
         }
+        if (typeof name[1] != "undefined") {
+            popupText += "<br/><a href='https://en.wikipedia.org/wiki/" + name[1] + "'>Wikipedia</a>";
+        }        
         if (link != '') {
             popupText += "<br/><br/><a href='" + link + "' target='blank'>" + linkTextSkipperGuide + "</a>";
         }
